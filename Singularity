@@ -2,6 +2,7 @@ Bootstrap: docker
 From: ubuntu:bionic
 
 %environment
+    ## ensure deepribo env is in the path variable
     PATH="/home/miniconda3/envs/deepribo/bin:$PATH"
 
 %files
