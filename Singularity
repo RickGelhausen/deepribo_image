@@ -41,16 +41,16 @@ From: ubuntu:bionic
     sed -i 's/sys.exit(ParseArgs())/ParseArgs()/g' /home/DeepRibo-master/src/DeepRibo.py
 
     ## cleaning up
-    RUN cp /home/DeepRibo-master/src/*.py /usr/local/bin && cp /home/DeepRibo-master/src/*.R /usr/local/bin && rm -rf /home/DeepRibo-master/
+    cp /home/DeepRibo-master/src/*.py /usr/local/bin && cp /home/DeepRibo-master/src/*.R /usr/local/bin && rm -rf /home/DeepRibo-master/
 
     ## make files executable
-    RUN chmod +x /usr/local/bin/DataParser.py
-    RUN chmod +x /usr/local/bin/DeepRibo.py
-    RUN chmod +x /usr/local/bin/PredictToBedgraph.py
-    RUN chmod +x /usr/local/bin/s_curve_cutoff_estimation.R
+    chmod +x /usr/local/bin/DataParser.py
+    chmod +x /usr/local/bin/DeepRibo.py
+    chmod +x /usr/local/bin/PredictToBedgraph.py
+    chmod +x /usr/local/bin/s_curve_cutoff_estimation.R
 
     ## test commands
-    RUN DeepRibo.py -h
-    RUN DataParser.py -h
-    RUN PredictToBedgraph.py -h
-    RUN s_curve_cutoff_estimation.R
+    DeepRibo.py -h
+    DataParser.py -h
+    PredictToBedgraph.py -h
+    s_curve_cutoff_estimation.R
