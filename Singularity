@@ -49,7 +49,7 @@ From: ubuntu:bionic
     chmod +x /usr/local/bin/PredictToBedgraph.py
     chmod +x /usr/local/bin/s_curve_cutoff_estimation.R
 
-    ## test commands
+    ## test deepribo commands
     DeepRibo.py -h
     DataParser.py -h
     PredictToBedgraph.py -h
