@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:bionic
 
 %environment
-    export PATH="/home/miniconda3/bin:${PATH}"
+    PATH="/home/miniconda3/bin:${PATH}"
 
 %files
     deepribo.yaml
@@ -15,7 +15,7 @@ From: ubuntu:bionic
     wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /home/miniconda.sh
     bash /home/miniconda.sh -b -p /home/miniconda3
     rm /home/miniconda.sh
-    export PATH=/home/miniconda3/envs/deepribo/bin:$PATH
+    PATH=/home/miniconda3/envs/deepribo/bin:$PATH
 
     ## update conda
     conda --version
