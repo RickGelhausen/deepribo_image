@@ -2,7 +2,7 @@ Bootstrap: docker
 From: ubuntu:bionic
 
 %environment
-    PATH="/home/miniconda3/bin:${PATH}"
+    PATH="/home/miniconda3/envs/deepribo/bin:$PATH"
 
 %files
     deepribo.yaml
@@ -54,3 +54,6 @@ From: ubuntu:bionic
     DataParser.py -h
     PredictToBedgraph.py -h
     s_curve_cutoff_estimation.R
+
+%runscript
+    exec "$@"
