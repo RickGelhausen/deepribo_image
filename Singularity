@@ -6,6 +6,7 @@ From: ubuntu:bionic
     PATH="/home/miniconda3/envs/deepribo/bin:$PATH"
 
 %files
+    ## fetch deepribo dependencies
     deepribo.yaml
 
 %post
